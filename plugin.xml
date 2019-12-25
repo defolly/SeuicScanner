@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="SeuicScanner" version="1.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+	<name>SeuicScanner</name>
+	<DESCRIPTION>YuRi</DESCRIPTION>
+	<js-module name="SeuicScanner" src="www/SeuicScanner.js">
+		<clobbers target="SeuicScanner" />
+	</js-module>
+	
+	<platform name="android">
+		<config-file parent="/*" target="res/xml/config.xml">
+			<feature name="SeuicScanner">
+				<param name="android-package" value="ScanPlugin.SeuicScanner" />
+			</feature>
+		</config-file>
+	<source-file src="src/android/SeuicScanner.java" target-dir="src/ScanPlugin" />
+	<source-file src="src/android/ScannerAPI.jar" target-dir="libs" />
+	</platform>
+</plugin>
